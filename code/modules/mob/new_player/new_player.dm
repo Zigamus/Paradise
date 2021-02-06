@@ -324,6 +324,11 @@
 		to_chat(src, msg)
 		alert(msg)
 		return FALSE
+	if(!thisjob.character_species_eligible(client))
+		var/msg = "Должность [rank] недоступна в связи с расой вашего персонажа. Пожалуйста, попробуйте персонажа с другой расой."
+		to_chat(src, msg)
+		alert(msg)
+		return FALSE
 
 	SSjobs.AssignRole(src, rank, 1)
 

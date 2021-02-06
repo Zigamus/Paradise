@@ -27,6 +27,7 @@
 	)
 
 	outfit = /datum/outfit/job/rd
+	blacklisted_species = list("Vox")
 
 /datum/outfit/job/rd
 	name = "Research Director"

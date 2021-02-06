@@ -20,6 +20,7 @@
 	exp_requirements = 3000
 	exp_type = EXP_TYPE_MEDICAL
 	outfit = /datum/outfit/job/cmo
+	blacklisted_species = list("Vox")
 
 /datum/outfit/job/cmo
 	name = "Chief Medical Officer"

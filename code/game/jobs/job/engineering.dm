@@ -22,6 +22,7 @@
 	exp_requirements = 3000
 	exp_type = EXP_TYPE_ENGINEERING
 	outfit = /datum/outfit/job/chief_engineer
+	blacklisted_species = list("Vox")
 
 /datum/outfit/job/chief_engineer
 	name = "Chief Engineer"

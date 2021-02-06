@@ -49,6 +49,7 @@
 	var/exp_requirements = 0
 	var/exp_type = ""
 
+	var/list/blacklisted_species = list()
 	var/min_age_allowed = 0
 	var/disabilities_allowed = 1
 	var/transfer_allowed = TRUE // If false, ID computer will always discourage transfers to this job, even if player is eligible
@@ -131,6 +132,13 @@
 	if(C.prefs.age >= min_age_allowed)
 		return TRUE
 	return FALSE
+
+/datum/job/proc/character_species_eligible(client/C)
+	if(!C)
+		return FALSE
+	if(blacklisted_species.Find(C.prefs.species))
+		return FALSE
+	return TRUE
 
 /datum/job/proc/is_position_available()
 	return (current_positions < total_positions) || (total_positions == -1)

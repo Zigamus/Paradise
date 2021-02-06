@@ -667,6 +667,9 @@ GLOBAL_LIST_INIT(special_role_times, list( //minimum age (in days) for accounts 
 			if(!job.character_old_enough(user.client))
 				html += "<del class='dark'>[rank]</del></td><td class='bad'><b> \[ВОЗРАСТ ОТ [(job.min_age_allowed)]]</b></td></tr>"
 				continue
+			if(!job.character_species_eligible(user.client))
+				html += "<del class='dark'>[rank]</del></td><td class='bad'><b> \[РАСА]</b></td></tr>"
+				continue
 			if((job_support_low & JOB_CIVILIAN) && (job.title != "Civilian"))
 				html += "<font color=orange>[rank]</font></td><td></td></tr>"
 				continue

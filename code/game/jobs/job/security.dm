@@ -23,6 +23,7 @@
 	exp_type = EXP_TYPE_SECURITY
 	disabilities_allowed = 0
 	outfit = /datum/outfit/job/hos
+	blacklisted_species = list("Vox")
 
 /datum/outfit/job/hos
 	name = "Head of Security"
